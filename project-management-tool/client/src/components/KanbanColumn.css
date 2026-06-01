@@ -1,0 +1,117 @@
+/* ============================================
+   KanbanColumn Styles
+   ============================================ */
+
+.kanban-column {
+  flex: 1;
+  min-width: 300px;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-base);
+  border-radius: var(--radius-lg);
+}
+
+.kanban-column--drag-over {
+  background: var(--color-surface-hover);
+  box-shadow: inset 0 0 0 2px var(--color-accent-subtle);
+}
+
+/* Header */
+.kanban-column__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) 0 var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+.kanban-column__title-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.kanban-column__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.kanban-column__title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+}
+
+.kanban-column__count {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  background: var(--color-border);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+}
+
+.kanban-column__more-btn {
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.kanban-column__more-btn:hover {
+  background: var(--color-border);
+  color: var(--color-text);
+}
+
+/* Body */
+.kanban-column__body {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding-bottom: var(--space-2xl); /* space for drop */
+}
+
+/* Add Task Button */
+.kanban-column__add-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: transparent;
+  transition: all var(--transition-fast);
+  margin-top: var(--space-xs);
+}
+
+.kanban-column__add-btn:hover {
+  border-color: var(--color-border-hover);
+  color: var(--color-text-secondary);
+  background: var(--color-surface);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .kanban-column {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
