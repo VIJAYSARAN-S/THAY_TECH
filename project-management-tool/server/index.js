@@ -33,8 +33,7 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(PORT, async () => {
-  console.log(`\n🚀 Server running on http://localhost:${PORT}`);
-  console.log(`📦 API base: http://localhost:${PORT}/api\n`);
+  console.log('✅ Server running');
   
   // Initialize the database on startup
   try {

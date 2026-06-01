@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: project-management-server
+    env: node
+    rootDir: project-management-tool/server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DATABASE_URL
+        sync: false
